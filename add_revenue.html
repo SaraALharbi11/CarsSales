@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Revenue</title>
+</head>
+<body>
+    <h1>Add Revenue</h1>
+    <form action="/add_revenue" method="post">
+        {{ form.hidden_tag() }}
+        <label for="company">Car Company:</label>
+        {{ form.company(id="company") }}
+        <br>
+        <label for="revenue">Revenue:</label>
+        {{ form.revenue(id="revenue") }}
+        <br>
+        <label for="car_model">Car Model:</label>
+        {{ form.car_model(id="car_model") }}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <p><a href="/choose_company">Back to Choose Company</a></p>
+</body>
+</html>
