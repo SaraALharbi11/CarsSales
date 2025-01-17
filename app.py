@@ -2,13 +2,13 @@ from flask import Flask, request, render_template, redirect, url_for, session
 import mysql.connector
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # لإدارة الجلسات
+app.secret_key = 'your_secret_key'  
 
 # MySQL Configuration
 db_config = {
     'user': 'root',
-    'password': '12345678',
-    'host': '127.0.0.1',
+    'password': '----',
+    'host': '----',
     'database': 'electric_cars'
 }
 
@@ -33,7 +33,7 @@ def login():
     cursor.close()
     conn.close()
     if user and user['password'] == password:
-        session['username'] = username  # حفظ اسم المستخدم في الجلسة
+        session['username'] = username  
         return redirect(url_for('home'))
     else:
         return redirect(url_for('error'))
@@ -49,7 +49,7 @@ def register():
         conn.commit()
         cursor.close()
         conn.close()
-        session['username'] = username  # حفظ اسم المستخدم في الجلسة
+        session['username'] = username  #
         return redirect(url_for('home'))
     return render_template('register.html')
 
@@ -91,7 +91,7 @@ def error():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    session.pop('username', None)  # إزالة اسم المستخدم من الجلسة
+    session.pop('username', None)  #
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
