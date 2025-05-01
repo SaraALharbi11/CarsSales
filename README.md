@@ -1,2 +1,2 @@
 # CarsSales
-A program that allows users who have a car shop to see the number of Tesla or BYD cars sold and determine the date of the car's sale and its value to analyze customer preferences during this period.
+program that allows car showroom owners to view the number of Tesla and BYD cars sold, along with the sale date and value of each car. The goal is to analyze customer preferences and purchasing trends during a specific period through  user-friendly web interface.
